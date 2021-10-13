@@ -66,9 +66,9 @@ class XMLParser {
 }
 
     private fun readName(parser: XmlPullParser): String {
-    parser.require(XmlPullParser.START_TAG, ns, "im:name")
+    parser.require(XmlPullParser.START_TAG, ns, "author")
     val summary = readText(parser)
-    parser.require(XmlPullParser.END_TAG, ns, "im:name")
+    parser.require(XmlPullParser.END_TAG, ns, "author")
     return summary
 }
 

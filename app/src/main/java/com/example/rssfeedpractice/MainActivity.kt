@@ -27,11 +27,11 @@ class MainActivity : AppCompatActivity() {
         RC.adapter = rvAdapter
         RC.layoutManager = LinearLayoutManager(this)*/
 
-        FetchTopSongs().execute()
+        FetchRecentQuestions().execute()
 
     }
 
-    private inner class FetchTopSongs : AsyncTask<Void, Void, MutableList<Question>>() {
+    private inner class FetchRecentQuestions : AsyncTask<Void, Void, MutableList<Question>>() {
         val parser = XMLParser()
         override fun doInBackground(vararg params: Void?): MutableList<Question> {
             val url = URL("https://stackoverflow.com/feeds")
